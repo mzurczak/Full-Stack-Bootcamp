@@ -31,7 +31,7 @@ Paddle.prototype.moveDown = function(){
   else this.position[1] += this.move;
 }
 
-Paddle.prototype.move = function(){
+Paddle.prototype.movePaddle = function(){
   if (this.movementUp===true){
     if (this.position[1]<=0) this.position[1]=0;
     else this.position[1] -= this.move;
