@@ -1,6 +1,6 @@
-function Dish(dishName, price, ingredientArray){
+function Dish(dishName, price, ingredients){
   this.name=dishName;
-  this.ingredient=ingredientArray;
+  this.ingredient=ingredients;
   this.fixedCost=10;
   this.priceOfDish=price;
 }
@@ -23,26 +23,23 @@ Dish.prototype.profit = function(){
 
 function Restaurant(){
   this.ammountOfOrders=0;
-  this.orders=[];
+  this.orders={};
 }
 
 Restaurant.prototype.orderDish = function(object){
   this.ammountOfOrders++;
-  // var newObject=object;
-  object["orderNo"]=this.ammountOfOrders;
-  this.orders.push(object)
-  // this.orders.object[orderNo]=this.ammountOfOrders;
+  this.orders[this.ammountOfOrders]=object;
 }
 
 Restaurant.prototype.printOrders = function(){
   for (var i in this.orders){
-    console.log("Order #"+this.orders[i].orderNo+": "+this.orders[i].name);
+    console.log("Order #"+i+": "+this.orders[i].name);
   }
 }
 
 Restaurant.prototype.printCheck = function (){
   for (var i in this.orders){
-    console.log("Order #"+this.orders[i].orderNo+": "+this.orders[i].name+" - "+this.orders[i].priceOfDish);
+    console.log("Order #"+i+": "+this.orders[i].name+" - "+this.orders[i].priceOfDish);
   }
 }
 
@@ -51,15 +48,22 @@ function Ingredient(nameOfIngredient, ingredientPrice){
   this.price=ingredientPrice;
 }
 
-var pizza = new Dish('Pizza', 35, [cheese, pepperoni, dough]);
-var salad = new Dish('Salad',22, [cheese,pepperoni]);
-var cheese = new Ingredient('Cheese', 5);
-var pepperoni = new Ingredient('Pepperoni', 6);
-var dough = new Ingredient('Dough', 7);
-var restaurant = new Restaurant();
-restaurant.orderDish(pizza);
-restaurant.orderDish(salad);
-restaurant.printOrders();
-restaurant.printCheck();
-console.log(pizza.cost());
-console.log(pizza.profit());
+// var pizza = new Dish('Pizza', 35, {cheese, pepperoni, dough});
+// var salad = new Dish('Salad',22, {cheese,pepperoni});
+// var cheese = new Ingredient('Cheese', 5);
+// var pepperoni = new Ingredient('Pepperoni', 6);
+// var dough = new Ingredient('Dough', 7);
+// var restaurant = new Restaurant();
+// restaurant.orderDish(pizza);
+// restaurant.orderDish(salad);
+// restaurant.printOrders();
+// restaurant.printCheck();
+// console.log(pizza.cost());
+// console.log(pizza.profit());
+
+module.exports = {
+  Ingredient: Ingredient,
+  Dish: Dish,
+  Restaurant: Restaurant
+
+}
