@@ -1,13 +1,15 @@
 {
-  "name": "stack_exercise",
+  "name": "data_structures",
   "version": "1.0.0",
-  "description": "\"This is an implementation of stack object\"",
+  "description": "Exercises with different data structures",
   "main": "stackExercise.js",
   "scripts": {
-    "stackTest": "tape stackTests.js"
+    "stackTest": "tape stackTests.js | tap-spec",
+    "queueTest": "tape queueTests.js | tap-spec",
+    "setTest": "tape setTests.js | tap-spec"
   },
   "keywords": [
-    "\"stack\""
+    "stack", "queue", "set"
   ],
   "author": "Michał",
   "license": "ISC",
