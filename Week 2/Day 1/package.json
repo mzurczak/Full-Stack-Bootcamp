@@ -1,0 +1,21 @@
+{
+  "name": "first-project-with-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape tests.js",
+    "restaurantTest": "tape restaurantTests.js"
+  },
+  "author": "Michal",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "asciify": "^1.3.5",
+    "data-type": "^0.1.3",
+    "tape": "^4.8.0"
+  },
+  "devDependencies": {
+    "tap-spec": "^4.1.1"
+  }
+}
