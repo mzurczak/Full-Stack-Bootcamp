@@ -1,0 +1,17 @@
+{
+  "name": "stack_exercise",
+  "version": "1.0.0",
+  "description": "\"This is an implementation of stack object\"",
+  "main": "stackExercise.js",
+  "scripts": {
+    "stackTest": "tape stackTests.js"
+  },
+  "keywords": [
+    "\"stack\""
+  ],
+  "author": "Michał",
+  "license": "ISC",
+  "dependencies": {
+    "tape": "^4.8.0"
+  }
+}
