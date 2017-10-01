@@ -1,8 +1,9 @@
 function Ball (radious, positionArr) {
   this.radious = radious;
   this.position = positionArr;
-  this.velocity = [5, 5];
+  this.velocity = [4, 4];
   this.collisionPaddle=false;
+  this.lifes = 5;
 }
 
 Ball.prototype.renderBall = function(context) {
@@ -29,5 +30,6 @@ Ball.prototype.moveBall = function(width, height, paddle, brick){
   if (this.position[1]+this.radious>height) {
     this.velocity[1] = -this.velocity[1];//this.position=[400, 300];
     this.penalty = true;
+    this.lifes--;
   }
 }

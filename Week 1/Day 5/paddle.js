@@ -1,9 +1,9 @@
 function Paddle (fieldSize){
-  this.size = [200,20];      //  [width, hight]
+  this.size = [100,8];      //  [width, hight]
   this.position=[fieldSize[0]/2-this.size[0]/2,fieldSize[1]-this.size[1]-5];
   this.movementUp=false;
   this.movementDown=false;
-  this.speed=6;
+  this.speed=10;
 }
 
 Paddle.prototype.renderPaddle = function(context) {

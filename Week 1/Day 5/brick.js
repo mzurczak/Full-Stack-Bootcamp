@@ -1,8 +1,9 @@
 function Brick(positionArr, num){
   this.position=positionArr;
-  this.size=[60, 30];
-  this.colorArray=["#00cc00", "#00ff00", "#006600", "yellow", "blue", "pink"];
-  this.color=this.colorArray[num];
+  this.size=[45, 15];
+  this.numOfHits = 0 + num;
+  this.colorArray=["DarkBlue", "DeepSkyBlue", "LightBlue"];
+  this.color=this.colorArray[this.numOfHits];
   this.isHitted=false;
 }
 
