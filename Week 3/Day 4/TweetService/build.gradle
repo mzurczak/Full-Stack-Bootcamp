@@ -1,0 +1,12 @@
+apply plugin: 'java-library'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compileOnly 'org.projectlombok:lombok:1.16.18'
+	compile 'org.apache.commons:commons-lang3:3.6'
+	compile 'org.apache.commons:commons-collections4:4.1'
+    testImplementation 'junit:junit:4.12'
+}

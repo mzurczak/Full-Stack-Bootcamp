@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'ch.propulsion.BMICalculator.bmiCalculator' // e.g. 'foundation.example.HelloWorld'
+
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+}
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': "${mainClassName}"
+    }
+}
